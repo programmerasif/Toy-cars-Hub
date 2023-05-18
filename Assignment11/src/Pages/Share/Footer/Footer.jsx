@@ -1,11 +1,12 @@
-import React from 'react';
+import logo from '../../../assets/carLogo.png'
+
 
 const Footer = () => {
-    return (
-        <div>
-                thos is footer
-        </div>
-    );
+  return (
+    <div>
+     
+    </div>
+  );
 };
 
 export default Footer;

@@ -12,6 +12,7 @@ import Home from './Pages/Share/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
+import AllToy from './Pages/AllToy/AllToy';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register />
+      },
+      {
+        path: '/alltoy',
+        element:<AllToy />
       }
     ],
   },

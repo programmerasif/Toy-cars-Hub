@@ -44,8 +44,9 @@ const Navebr = () => {
         </div>
         <div className="navbar-end hidden px-12 lg:flex">
           <ul className="menu menu-horizontal ">
-            <li><a>Home</a></li>
-            <li><a>All Toys</a></li>
+            <li><NavLink to='/'>Home</NavLink> </li>
+            <li><NavLink to='/alltoy'>All Toys</NavLink> </li>
+            
             <li><a>My Toys</a></li>
             <li><a>Add A Toy</a></li>
             <li><a>Blogs</a></li>

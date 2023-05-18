@@ -4,15 +4,21 @@ import logo from '../../../assets/carLogo.png'
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-gray-800 text-white mx-auto">
+      <footer className="footer p-10 bg-[#212A3E] text-white mx-auto">
 
        <div>
-       <div className='grid md:grid-cols-3 sm:grid-cols-1 gap-8 justify-center items-center mx-auto md:p-8 ms:p-0 '>
+       <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-8 justify-center items-center mx-auto md:p-8 ms:p-0 '>
        <div>
           <img width="150" height="150" src={logo} alt="" />
           <p>Toy-cars Hub<br />Providing reliable Toy-Cars since 2016</p>
         </div>
 
+        <div className='flex flex-col '>
+          <span className="footer-title">CUSTOMER SERVICE</span>
+          <a className="link link-hover">Payment Methods</a>
+          <a className="link link-hover">Support Center</a>
+          <a className="link link-hover">Cancellation, Return & Refund</a> 
+        </div>
         <div className='flex flex-col '>
           <span className="footer-title">Contact </span>
           <a className="link link-hover">Facbook : www.facebook/Toy-CarsHub.com</a>

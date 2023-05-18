@@ -1,9 +1,9 @@
-
+import logo from '../../../assets/unicon.png'
 
 const Navebr = () => {
   return (
-    <div className="bg-gray-900">
-      <div className="navbar bg-gray-700 text-white">
+    <div className="bg-blue-500">
+      <div className="navbar bg-[#394867] text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -17,7 +17,11 @@ const Navebr = () => {
               <li><a>Blogs</a></li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-2xl ">Toy-cars Hub</a>
+          <a className="btn btn-ghost normal-case text-2xl ">
+            <div className='flex gap-3 items-end justify-center'>
+            Toy-cars Hub <img src={logo} alt="" height='45' width='45' className='rounded-full ring-offset-2 ring-2' />
+            </div>
+          </a>
         </div>
         <div className="navbar-end hidden px-12 lg:flex">
           <ul className="menu menu-horizontal ">

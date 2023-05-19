@@ -4,7 +4,7 @@ import logo from '../../../assets/carLogo.png'
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-[#212A3E] text-white mx-auto">
+      <footer className="footer p-10 bg-[#212A3E] text-white mx-auto py-14">
 
        <div>
        <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-8 justify-center items-center mx-auto md:p-8 ms:p-0 '>

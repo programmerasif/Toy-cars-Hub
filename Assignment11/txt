@@ -1,0 +1,241 @@
+const spors = [
+    {
+        "make": "Ferrari",
+        "model": "488 GTB",
+        "year": 2023,
+        "description": "A high-performance sports car with breathtaking speed and sleek design.",
+        "price": 300000,
+        "rating": 4.8,
+        "img" : "https://i.ibb.co/XDjnJq6/Ferrari-488.png"
+      },
+      {
+        "make": "Acura",
+        "model": "NSX",
+        "year": 2023,
+        "description": "An exotic and high-performance sports car with stunning design and advanced technology.",
+        "rating": 4.5,
+        "price": 150000,
+        "img" : "https://i.ibb.co/nrWDNJP/nsxjpg.jpg"
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Aventador",
+        "year": 2022,
+        "description": "An exotic and powerful sports car known for its distinctive scissor doors and aggressive styling.",
+        "price": 400000,
+        "rating": 4.7,
+        "img" : "https://i.ibb.co/qBvKp1G/lambo.jpg"
+      },
+      {
+        "make": "Porsche",
+        "model": "911 GT3",
+        "year": 2023,
+        "description": "A track-focused sports car with exceptional handling and a thrilling driving experience.",
+        "price": 200000,
+        "rating": 4.9,
+        "img" : "https://i.ibb.co/Tk32k2d/Porsche-911.jpg"
+      }
+]
+
+// buss
+
+
+const buses = [
+    {
+      "make": "Mercedes-Benz",
+      "model": "Citaro",
+      "year": 2023,
+      "price": 250000,
+      "description": "A modern and comfortable city bus known for its efficiency and advanced features.",
+      "rating": 4.5,
+      "img" : "https://i.ibb.co/SKQzDYB/bus.jpg"
+    },
+    {
+      "make": "Volvo",
+      "model": "7900 Electric",
+      "year": 2023,
+      "price": 300000,
+      "description": "An electric bus with zero-emission capabilities and innovative technology for sustainable urban transport.",
+      "rating": 4.2,
+      "img" : "https://i.ibb.co/cwdY8TF/jbx4agj1.jpg"
+    },
+    {
+      "make": "Scania",
+      "model": "Citywide",
+      "year": 2023,
+      "price": 280000,
+      "description": "A versatile and reliable bus suitable for urban transportation with a focus on fuel efficiency and passenger comfort.",
+      "rating": 4.8,
+      "img" : "https://i.ibb.co/4YBcMsz/scaneya.jpg"
+    },
+    {
+      "make": "MAN",
+      "model": "Lion's City",
+      "year": 2023,
+      "price": 270000,
+      "description": "A modern and efficient bus designed for urban mobility, offering a smooth ride and advanced safety features.",
+      "rating": 4.6,
+      "img" : "https://i.ibb.co/X8JMPfB/man.jpg"
+    }
+  ]
+
+  
+cons private = [
+    {
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2023,
+        "description": "A popular midsize sedan known for its reliability, fuel efficiency, and comfortable interior.",
+        "price": 30000,
+        "rating": 4.4,
+        "img" : "https://i.ibb.co/jJfmRkG/toyota.jpg"
+      },
+      {
+        "make": "Honda",
+        "model": "Accord",
+        "year": 2023,
+        "description": "A dependable and well-rounded sedan with a spacious cabin, strong performance, and advanced safety features.",
+        "price": 32000,
+        "rating": 4.2,
+        "img" : "https://i.ibb.co/0919Lgf/honda-Accord.jpg"
+      },
+      {
+        "make": "Toyota",
+        "model": "CHR",
+        "year": 2023,
+        "description": "A stylish and compact crossover known for its eye-catching design and fuel efficiency.",
+        "price": 25000,
+        "rating": 4.5,
+        "img" : "https://i.ibb.co/B62hXWv/chr.jpg"
+      },
+      {
+        "make": "Toyota",
+        "model": "Corolla",
+        "year": 2023,
+        "description": "A reliable and fuel-efficient compact car with a comfortable interior.",
+        "price": 20000,
+        "rating": 4.5,
+        "img" : "https://i.ibb.co/H7q6qzk/corola.jpg"
+      },
+]
+
+
+ const allCars = [
+    {
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2023,
+        "description": "A popular midsize sedan known for its reliability, fuel efficiency, and comfortable interior.",
+        "price": 30000,
+        "rating": 4.4,
+        "img" : "https://i.ibb.co/jJfmRkG/toyota.jpg"
+      },
+      {
+        "make": "Honda",
+        "model": "Accord",
+        "year": 2023,
+        "description": "A dependable and well-rounded sedan with a spacious cabin, strong performance, and advanced safety features.",
+        "price": 32000,
+        "rating": 4.2,
+        "img" : "https://i.ibb.co/0919Lgf/honda-Accord.jpg"
+      },
+      {
+        "make": "Toyota",
+        "model": "CHR",
+        "year": 2023,
+        "description": "A stylish and compact crossover known for its eye-catching design and fuel efficiency.",
+        "price": 25000,
+        "rating": 4.5,
+        "img" : "https://i.ibb.co/B62hXWv/chr.jpg"
+      },
+      {
+        "make": "Toyota",
+        "model": "Corolla",
+        "year": 2023,
+        "description": "A reliable and fuel-efficient compact car with a comfortable interior.",
+        "price": 20000,
+        "rating": 4.5,
+        "img" : "https://i.ibb.co/H7q6qzk/corola.jpg"
+      },
+      {
+        "make": "Mercedes-Benz",
+        "model": "Citaro",
+        "year": 2023,
+        "price": 250000,
+        "description": "A modern and comfortable city bus known for its efficiency and advanced features.",
+        "rating": 4.5,
+        "img" : "https://i.ibb.co/SKQzDYB/bus.jpg"
+      },
+      {
+        "make": "Volvo",
+        "model": "7900 Electric",
+        "year": 2023,
+        "price": 300000,
+        "description": "An electric bus with zero-emission capabilities and innovative technology for sustainable urban transport.",
+        "rating": 4.2,
+        "img" : "https://i.ibb.co/cwdY8TF/jbx4agj1.jpg"
+      },
+      {
+        "make": "Scania",
+        "model": "Citywide",
+        "year": 2023,
+        "price": 280000,
+        "description": "A versatile and reliable bus suitable for urban transportation with a focus on fuel efficiency and passenger comfort.",
+        "rating": 4.8,
+        "img" : "https://i.ibb.co/4YBcMsz/scaneya.jpg"
+      },
+      {
+        "make": "MAN",
+        "model": "Lion's City",
+        "year": 2023,
+        "price": 270000,
+        "description": "A modern and efficient bus designed for urban mobility, offering a smooth ride and advanced safety features.",
+        "rating": 4.6,
+        "img" : "https://i.ibb.co/YyTdPBP/man.jpg"
+      },
+      {
+        "make": "Iveco",
+        "model": "Urbanway",
+        "year": 2023,
+        "price": 260000,
+        "description": "A practical and eco-friendly bus designed for urban environments, featuring a spacious interior and low emissions.",
+        "rating": 4.3,
+        "img" : ""
+      },
+      {
+        "make": "Ferrari",
+        "model": "488 GTB",
+        "year": 2023,
+        "description": "A high-performance sports car with breathtaking speed and sleek design.",
+        "price": 300000,
+        "rating": 4.8,
+        "img" : "https://i.ibb.co/XDjnJq6/Ferrari-488.png"
+      },
+      {
+        "make": "Acura",
+        "model": "NSX",
+        "year": 2023,
+        "description": "An exotic and high-performance sports car with stunning design and advanced technology.",
+        "rating": 4.5,
+        "price": 150000,
+        "img" : "https://i.ibb.co/nrWDNJP/nsxjpg.jpg"
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Aventador",
+        "year": 2022,
+        "description": "An exotic and powerful sports car known for its distinctive scissor doors and aggressive styling.",
+        "price": 400000,
+        "rating": 4.7,
+        "img" : "https://i.ibb.co/qBvKp1G/lambo.jpg"
+      },
+      {
+        "make": "Porsche",
+        "model": "911 GT3",
+        "year": 2023,
+        "description": "A track-focused sports car with exceptional handling and a thrilling driving experience.",
+        "price": 200000,
+        "rating": 4.9,
+        "img" : "https://i.ibb.co/Tk32k2d/Porsche-911.jpg"
+      },
+ ]

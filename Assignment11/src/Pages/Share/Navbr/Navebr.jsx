@@ -48,7 +48,7 @@ const Navebr = () => {
             <li><NavLink to='/alltoy'>All Toys</NavLink> </li>
             
             <li><a>My Toys</a></li>
-            <li><a>Add A Toy</a></li>
+            <li><NavLink to='/addedToy'>Added Toys</NavLink> </li>
             <li><a>Blogs</a></li>
            {
             user != true ? <> <NavLink to='/login'><li><span>LOG IN</span></li></NavLink>

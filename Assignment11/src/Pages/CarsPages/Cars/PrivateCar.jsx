@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import SingleCard from '../SingleCard';
 
 const PrivateCar = () => {
     const [cars ,setCars] = useState([])
     useEffect(() =>{
-        fetch(`http://localhost:5000/privateCar`)
+        fetch(`https://server-forassiignment11.vercel.app/privateCar`)
         .then(res => res.json())
         .then(data =>setCars(data) )
     },[])

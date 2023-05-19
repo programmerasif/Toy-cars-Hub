@@ -5,7 +5,7 @@ const BusCar = () => {
 
     const [cars ,setCars] = useState([])
     useEffect(() =>{
-        fetch(`http://localhost:5000/busCar`)
+        fetch(`https://server-forassiignment11.vercel.app/busCar`)
         .then(res => res.json())
         .then(data =>setCars(data) )
     },[])

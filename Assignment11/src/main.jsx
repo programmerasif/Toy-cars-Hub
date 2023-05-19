@@ -1,4 +1,3 @@
-import React, { Children } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
@@ -14,6 +13,7 @@ import Register from './Pages/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import AllToy from './Pages/AllToy/AllToy';
 import AddedToy from './Pages/AddAToy/AddedToy';
+import React from 'react';
 
 const router = createBrowserRouter([
   {

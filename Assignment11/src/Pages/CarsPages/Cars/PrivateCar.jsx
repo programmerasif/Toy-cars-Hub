@@ -4,7 +4,7 @@ import SingleCard from '../SingleCard';
 const PrivateCar = () => {
     const [cars ,setCars] = useState([])
     useEffect(() =>{
-        fetch(`https://server-forassiignment11.vercel.app/privateCar`)
+        fetch(`http://localhost:5000/privateCar`)
         .then(res => res.json())
         .then(data =>setCars(data) )
     },[])

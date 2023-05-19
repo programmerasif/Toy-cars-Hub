@@ -239,3 +239,37 @@ cons private = [
         "img" : "https://i.ibb.co/Tk32k2d/Porsche-911.jpg"
       },
  ]
+
+ const demo = [
+  {
+    "pictureURL": "https://example.com/toy1.jpg",
+    "name": "Honda Accord",
+    "sellerName": "John Doe",
+    "subCategory": "Private Car",
+    "price": "$50",
+    "rating": "4.5",
+    "availableQuantity": "3",
+    "description": "This private  car toy is perfect for racing enthusiasts. It comes with a remote control for easy maneuvering and provides hours of fun."
+
+  },
+  {
+    "pictureURL": "https://i.ibb.co/qBvKp1G/lambo.jpg",
+    "name": "Lamborghini Aventador",
+    "sellerName": "Mary Smith",
+    "subCategory": "Aventador",
+    "price": "$35",
+    "rating": "4.2",
+    "availableQuantity": "5",
+    "description": "Get ready for some off-road action with this powerful monster truck toy. It features realistic details and a sturdy construction."
+  },
+  {
+    "pictureURL": "https://i.ibb.co/4YBcMsz/scaneya.jpg",
+    "name": "Scania Citywal",
+    "sellerName": "Jane Doe",
+    "subCategory": "Friction Powered",
+    "price": "$20",
+    "rating": "3.8",
+    "availableQuantity": "10",
+    "description": "Experience the thrill of speed with this friction-powered race car toy. Just push it forward and watch it zoom across the room."
+  }
+]

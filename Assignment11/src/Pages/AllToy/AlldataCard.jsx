@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const AlldataCard = ({cars}) => {
-    const {pictureURL,sellerName,name,subCategory,price,rating,availableQuantity} =cars
+    const {pictureURL,sellerName,name,subCategory,price,rating,availableQuantity,_id} =cars
    
     return (
         <div>
@@ -51,7 +52,7 @@ const AlldataCard = ({cars}) => {
                                 <button className="btn btn-ghost btn-xs">{availableQuantity}</button>
                             </th>
                             <th>
-                                <button className="btn bg-[#394867]">View Detils</button>
+                                <Link to={`/viewDetils/${_id}`}><button className="btn bg-[#394867]">View Detils</button></Link>
                             </th>
                         </tr>
                     </tbody>

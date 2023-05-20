@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
@@ -59,33 +60,34 @@ const Login = () => {
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 
 
-                        <div className="card-body bg-[#9BA4B5] rounded">
+                        <div className="card-body rounded px-16">
                             <h3 className="text-4xl font-bold"> Please Log-In</h3>
                             <form onSubmit={handelLogin}>
 
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Email</span>
+                                        <span className="label-text ">Email</span>
                                     </label>
                                     <input type="text" placeholder="email" required name='email' className="input input-bordered" />
                                 </div>
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Password</span>
+                                        <span className="label-text ">Password</span>
                                     </label>
                                     <input type="text" placeholder="password" required name='password' className="input input-bordered" />
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input type="submit" className="btn " />
+                                    <input type="submit" className="btn bg-[#394867]" />
                                 </div>
                                 <div className="form-control mt-6" onClick={handelGoogle}>
-                                    <input type="submit" value="Google" className="btn  text-white" />
+                                
+                                    <button className="btn bg-[#394867] "><span className="mr-3">Google</span> <FaGoogle /> </button>
                                 </div>
                             </form>
                             <div className="form-control mt-6">
-                                <Link to='/register'><p className='text-white'>Dont Have An account? <span className="link link-hover text-[#394867]">Register</span> </p></Link>
+                                <Link to='/register'><p className=''>Dont Have An account? <span className="link link-hover text-[#0753eb]">Register</span> </p></Link>
                             </div>
                            
                         </div>

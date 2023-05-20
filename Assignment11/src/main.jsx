@@ -46,6 +46,7 @@ const router = createBrowserRouter([
       {
         path:'/viewDetils/:id',
         element:<ViewDetils />,
+        loader: ({params}) => fetch(`http://localhost:5000/allCars/${params.id}`)
         
       },
       {

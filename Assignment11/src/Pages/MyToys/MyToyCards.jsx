@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
-const MyToyCards = ({cars}) => {
+const MyToyCards = ({cars,handelDelete}) => {
     const {pictureURL,sellerName,name,subCategory,price,rating,availableQuantity,_id} =cars
    console.log(cars);
+
+   
     return (
         <div>
             <div className="overflow-x-auto w-full">
@@ -55,7 +57,7 @@ const MyToyCards = ({cars}) => {
                                 <Link to={`/updatedToy/${_id}`}><button className="btn bg-[#394867]">Update</button></Link>
                             </th>
                             <th>
-                                <button className="btn bg-[#394867]">Delete</button>
+                                <button className="btn bg-[#394867]" onClick={() =>handelDelete(_id)}>Delete</button>
                             </th>
                         </tr>
                     </tbody>

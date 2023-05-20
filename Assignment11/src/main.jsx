@@ -14,6 +14,9 @@ import AuthProvider from './Provider/AuthProvider';
 import AllToy from './Pages/AllToy/AllToy';
 import AddedToy from './Pages/AddAToy/AddedToy';
 import React from 'react';
+import ViewDetils from './Pages/ViewDetils/ViewDetils';
+import MyToys from './Pages/MyToys/MyToys';
+import UpdatedMyToy from './Pages/MyToys/UpdatedMyToy';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +42,21 @@ const router = createBrowserRouter([
       {
         path: '/addedToy',
         element: <AddedToy />
+      },
+      {
+        path:'/viewDetils/:id',
+        element:<ViewDetils />,
+        
+      },
+      {
+        path: '/myToys',
+        element: <MyToys />
+      },
+      {
+        path:'/updatedToy/:id',
+        element:<UpdatedMyToy />,
+        loader: ({params}) => fetch(`http://localhost:5000/allCars/${params.id}`)
+        
       }
     ],
   },

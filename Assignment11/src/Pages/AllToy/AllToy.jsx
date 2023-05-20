@@ -5,7 +5,7 @@ import AlldataCard from "./AlldataCard";
 const AllToy = () => {
   const [cars ,setCars] = useState([])
   useEffect(() =>{
-    fetch(`http://localhost:5000/allCars`)
+    fetch(`http://localhost:5000/allCar`)
     .then(res => res.json())
     .then(data => setCars(data))
   },[])

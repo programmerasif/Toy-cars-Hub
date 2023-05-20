@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from "../Fairbase/Fairbase.config";
 
 export const AuthContext = createContext(null)
@@ -8,6 +8,8 @@ const AuthProvider = ({children}) => {
     const [loader,setLoader] = useState(true)
     const auth = getAuth(app)
 
+
+    const googleprovider = new GoogleAuthProvider();
     const creatUsers = (email,password) =>{
         setLoader(true)
         return createUserWithEmailAndPassword(auth,email,password)
@@ -15,6 +17,10 @@ const AuthProvider = ({children}) => {
     const login = (email,password) =>{
         setLoader(true)
         return signInWithEmailAndPassword(auth,email,password)
+    }
+    const google =() =>{
+        setLoader(true)
+        return signInWithPopup(auth,googleprovider)
     }
     const logOut = () =>{
         return signOut(auth)
@@ -36,7 +42,8 @@ const AuthProvider = ({children}) => {
         loader,
         creatUsers,
         login,
-        logOut
+        logOut,
+        google
     }
     return (
         <AuthContext.Provider value={authInfo}>

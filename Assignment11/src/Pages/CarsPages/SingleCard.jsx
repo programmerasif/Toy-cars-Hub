@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 
 const SingleCard = ({cars}) => {
     
     console.log(cars);
-    const {make,img,price,rating} = cars
+    const {make,img,price,rating,_id} = cars
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10 h-[300px]">
@@ -13,7 +14,7 @@ const SingleCard = ({cars}) => {
                 <p>Price :{price}</p>
                 <p>Ratings : {rating}</p>
                 <div className="card-actions">
-                    <button className="btn">View Detils</button>
+                    <Link to={`/viewDetils/${_id}`}><button className="btn">View Detils</button></Link>
                 </div>
             </div>
         </div>

@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
 
-    const { login } = useContext(AuthContext)
+    const { login, google} = useContext(AuthContext)
     
 
     const handelLogin = (e) =>{
@@ -22,11 +23,30 @@ const Login = () => {
         .then((person) => {
             // Signed in 
             const user = person.user;
-            console.log(user);
+            if (user) {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Successfully login',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
           })
           .catch((error) => {
             const err = error.message;
             console.log(err);
+          });
+    }
+
+    const handelGoogle = () =>{
+        google()
+        .then((result) => {
+            const user = result.user;
+            console.log(user);
+          }).catch((error) => {
+            console.log(error);
+            // ...
           });
     }
     return (
@@ -60,10 +80,14 @@ const Login = () => {
                                 <div className="form-control mt-6">
                                     <input type="submit" className="btn " />
                                 </div>
+                                <div className="form-control mt-6" onClick={handelGoogle}>
+                                    <input type="submit" value="Google" className="btn  text-white" />
+                                </div>
                             </form>
                             <div className="form-control mt-6">
                                 <Link to='/register'><p className='text-white'>Dont Have An account? <span className="link link-hover text-[#394867]">Register</span> </p></Link>
                             </div>
+                           
                         </div>
                     </div>
                 </div>

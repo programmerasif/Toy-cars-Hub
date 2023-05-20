@@ -1,27 +1,35 @@
+import { useContext } from "react";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 
 const AddedToy = () => {
+    const {user} = useContext(AuthContext)
     const handelAdded = (e) =>{
         e.preventDefault();
         const form = e.target
         const Picture = form.picter.value;
         const CarName = form.name.value;
         const SellerName = form.SellerName.value;
-        const SellerEmail = form.SellerEmail.value;
+        const email = form.SellerEmail.value;
         const SubCategory = form.SubCategory.value;
         const Price = form.Price.value;
         const Rating = form.rating.value;
         const Quantity = form.quantity.value;
+        const description = form.description.value;
         const person = {
             pictureURL: Picture,
             name:CarName,
-            SellerEmail,
+            email,
             sellerName:SellerName,
             subCategory:SubCategory,
             price: Price,
             rating: Rating,
-            availableQuantity:Quantity}
+            availableQuantity:Quantity,
+            description
+        }
+
         console.log(person);
 
         fetch(`http://localhost:5000/allCars`,{
@@ -32,7 +40,18 @@ const AddedToy = () => {
           body: JSON.stringify(person)
           })
           .then(res => res.json())
-          .then(data => console.log(data))
+          .then(data => {
+            if (data.acknowledged) {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Car has been Added',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+            console.log(data)
+        })
     }
 
     
@@ -64,7 +83,7 @@ const AddedToy = () => {
                     <label className="label">
                         <span className="label-text text-black">Seller Email</span>
                     </label>
-                    <input type="text" placeholder="SellerEmail" required name='SellerEmail' className="input input-bordered" />
+                    <input type="text" placeholder="SellerEmail" value={user?.email} required name='SellerEmail' className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
@@ -93,6 +112,12 @@ const AddedToy = () => {
                 </div>
                 
                </div>
+               <div className="form-control">
+                    <label className="label">
+                        <span className="label-text text-black">Description</span>
+                    </label>
+                    <input type="text" placeholder="Description" required name='description' className="input input-bordered" />
+                </div>
                <div className="form-control">
                    {/* <input type="button" value="Submit"  className=" "/> */}
                    <input type="submit" className="btn bg-[#394867] text-white p-4 mt-4" />

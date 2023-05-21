@@ -1,12 +1,14 @@
-import  { useContext } from 'react';
+import  { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import useTitlt from '../../Hook/useHook';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     useTitlt('Register Page')
     const navigate = useNavigate()
+    const [err ,setErr]  = useState('')
     const {creatUsers,google} = useContext(AuthContext);
     const handelRegister = (e) =>{
         e.preventDefault()
@@ -23,12 +25,21 @@ const Register = () => {
         .then((person) => {
             // Signed in 
             const user = person.user;
-            console.log(user);
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Successfully Register',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              setErr('')
             navigate('/')
           })
           .catch((error) => {
             const err = error.message;
             console.log(err);
+            setErr('some is worng ')
+
           });
     }
     const handelGoogle = () =>{
@@ -80,6 +91,7 @@ const Register = () => {
                                 </label>
                                 <input type="text" placeholder="password" required name='password' className="input input-bordered" />
                             </div>
+                            <p className='text-red-600'>{err}</p>
                             <div className="form-control mt-6">
                                 <input type="submit" className="btn bg-[#394867]" value='Register'/>
                             </div>

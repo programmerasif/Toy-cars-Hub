@@ -5,7 +5,7 @@ import SingleCard from "../SingleCard";
 const Sportscars = () => {
     const [cars ,setCars] = useState([])
     useEffect(() =>{
-        fetch(`https://server-forassiignment11.vercel.app/sportsCar`)
+        fetch(`https://server-forassiignment11.vercel.app/sports`)
         .then(res => res.json())
         .then(data =>setCars(data) )
     },[])

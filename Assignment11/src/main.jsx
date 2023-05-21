@@ -48,7 +48,11 @@ const router = createBrowserRouter([
         path:'/viewDetils/:id',
         element:<PrivateRout><ViewDetils /></PrivateRout>,
         loader: ({params}) => fetch(`http://localhost:5000/allCars/${params.id}`)
-        
+      },
+      {
+        path:'/viewDetilsforHom/:id',
+        element:<PrivateRout><ViewDetils /></PrivateRout>,
+        loader: ({params}) => fetch(`http://localhost:5000/allcarForhome/${params.id}`)
       },
       {
         path: '/myToys',

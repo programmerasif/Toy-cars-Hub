@@ -17,6 +17,7 @@ import React from 'react';
 import ViewDetils from './Pages/ViewDetils/ViewDetils';
 import MyToys from './Pages/MyToys/MyToys';
 import UpdatedMyToy from './Pages/MyToys/UpdatedMyToy';
+import PrivateRout from './Pages/PrivateRout/PrivateRout';
 
 const router = createBrowserRouter([
   {
@@ -41,17 +42,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/addedToy',
-        element: <AddedToy />
+        element: <PrivateRout><AddedToy /></PrivateRout>
       },
       {
         path:'/viewDetils/:id',
-        element:<ViewDetils />,
+        element:<PrivateRout><ViewDetils /></PrivateRout>,
         loader: ({params}) => fetch(`http://localhost:5000/allCars/${params.id}`)
         
       },
       {
         path: '/myToys',
-        element: <MyToys />
+        element: <PrivateRout><MyToys /></PrivateRout>
       },
       {
         path:'/updatedToy/:id',

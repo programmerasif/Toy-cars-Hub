@@ -1,14 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
     const { login, google} = useContext(AuthContext)
-    
-
+    const [err ,setErr] = useState(' ')
+        const navigate = useNavigate()
+        const from = useLocation()
+        console.log(from.state?.from);
+        console.log(from);
     const handelLogin = (e) =>{
         e.preventDefault()
         const form = e.target
@@ -17,12 +20,12 @@ const Login = () => {
         const password = form.password.value;
         
        
-        console.log({email,password});
-        console.log('clicked');
+       
 
         login(email,password)
         .then((person) => {
             // Signed in 
+            
             const user = person.user;
             if (user) {
                 Swal.fire({
@@ -32,19 +35,23 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                   })
+                 
             }
+            navigate('/')
           })
           .catch((error) => {
             const err = error.message;
             console.log(err);
+            setErr('Email or Password worng')
           });
     }
 
     const handelGoogle = () =>{
         google()
-        .then((result) => {
-            const user = result.user;
-            console.log(user);
+        .then(() => {
+            
+            setErr(' ')
+            navigate(from.state?.from || '/')
           }).catch((error) => {
             console.log(error);
             // ...
@@ -60,7 +67,7 @@ const Login = () => {
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 
 
-                        <div className="card-body rounded px-16">
+                        <div className="card-body rounded px-10">
                             <h3 className="text-4xl font-bold"> Please Log-In</h3>
                             <form onSubmit={handelLogin}>
 
@@ -78,14 +85,18 @@ const Login = () => {
                                     </label>
                                     <input type="text" placeholder="password" required name='password' className="input input-bordered" />
                                 </div>
+                                
                                 <div className="form-control mt-6">
                                     <input type="submit" className="btn bg-[#394867]" />
                                 </div>
-                                <div className="form-control mt-6" onClick={handelGoogle}>
+                                
+                                
+                            </form>
+                            <div className="form-control mt-2" onClick={handelGoogle}>
                                 
                                     <button className="btn bg-[#394867] "><span className="mr-3">Google</span> <FaGoogle /> </button>
                                 </div>
-                            </form>
+                                <p className="text-red-600">{err}</p>
                             <div className="form-control mt-6">
                                 <Link to='/register'><p className=''>Dont Have An account? <span className="link link-hover text-[#0753eb]">Register</span> </p></Link>
                             </div>

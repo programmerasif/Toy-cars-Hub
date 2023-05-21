@@ -46,7 +46,7 @@ const Navebr = () => {
                 !user?.uid ? <> <NavLink to='/login'><li><span>LOG IN</span></li></NavLink>
                   <NavLink to='/register'><li><span>REGISTER</span></li></NavLink></> : <> <NavLink ><li onClick={handelLogOut}><span>Log out</span></li></NavLink></>
               }
-              <li className='rounded-full '>{!user?.uid ? <FaUser /> : <>{user?.photoURLtrue  == true? <img src={user?.photoURL} alt="" />: <FaUser />}</>} </li>
+              <li className='rounded-full '>{!user?.uid ? <FaUser /> : <>{user?.true? <img src={user?.photoURL} alt="" />: <FaUser />}</>} </li>
 
             </ul>
           </div>
@@ -57,25 +57,26 @@ const Navebr = () => {
           </a>
         </div>
         <div className="navbar-end hidden px-12 lg:flex">
-          <ul className="menu menu-horizontal ">
+          <ul className="menu-horizontal flex gap-3 items-center justify-center">
 
             <li><NavLink to='/'>Home</NavLink> </li>
             <li><NavLink to='/alltoy'>All Toys</NavLink> </li>
             <li>{user && <NavLink to='/myToys'>My Toys</NavLink>} </li>
-
             <li>{user && <NavLink to='/addedToy'>Added Toys</NavLink> }</li>
             <li><a>Blogs</a></li>
-            {
-              !user ? <> <NavLink to='/login'><li><span>LOG IN</span></li></NavLink>
-                <NavLink to='/register'><li><span>REGISTER</span></li></NavLink></> : <> <li ><span onClick={handelLogOut}>Log out</span></li></>
-            }
             <li>
+            {
+              !user ? <> <NavLink to='/login'><span className='mr-3'>LOG IN</span></NavLink>
+                <NavLink to='/register'><span>REGISTER</span></NavLink></> : <> <NavLink ><span onClick={handelLogOut}>Log out</span></NavLink> </>
+            }
+            </li>
+            
               {user ? <div className="avatar placeholder">
                 <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
-                  {user?.photoURL == true? <img src={user?.photoURL} alt="" />: <FaUser />}
+                <img src={user?.photoURL} alt="" />
                 </div>
               </div> : <FaUser />}
-            </li>
+            
           </ul>
         </div>
 

@@ -69,15 +69,15 @@ const Navebr = () => {
         <div className="navbar-end hidden px-12 lg:flex">
           <ul className="menu-horizontal flex gap-3 items-center justify-center">
           <p className='absolute top-16 right-5 text-blue-700 border p-2'>{tool == true ? <span>{user?.displayName}</span> : ""}</p>
-            <li><NavLink to='/'>Home</NavLink> </li>
-            <li><NavLink to='/alltoy'>All Toys</NavLink> </li>
-            <li>{user && <NavLink to='/myToys'>My Toys</NavLink>} </li>
-            <li>{user && <NavLink to='/addedToy'>Added Toys</NavLink>}</li>
-            <li><a>Blogs</a></li>
+            <li><NavLink to='/'  className={({ isActive,  }) =>isActive ? "text-black" : "" }>Home</NavLink> </li>
+            <li><NavLink to='/alltoy' className={({ isActive,  }) =>isActive ? "text-black" : "" }>All Toys</NavLink> </li>
+            <li>{user && <NavLink to='/myToys' className={({ isActive,  }) =>isActive ? "text-black" : "" }>My Toys</NavLink>} </li>
+            <li>{user && <NavLink to='/addedToy' className={({ isActive,  }) =>isActive ? "text-black" : "" }>Added Toys</NavLink>}</li>
+            <li><NavLink to='/blog'className={({ isActive,  }) =>isActive ? "text-black" : "" } ><a>Blogs</a></NavLink></li>
             <li>
               {
-                !user ? <> <NavLink to='/login'><span className='mr-3'>LOG IN</span></NavLink>
-                  <NavLink to='/register'><span>REGISTER</span></NavLink></> : <> <NavLink ><span onClick={handelLogOut}>Log out</span></NavLink> </>
+                !user ? <> <NavLink to='/login' className={({ isActive,  }) =>isActive ? "text-black" : "" }><span className='mr-3'>LOG IN</span></NavLink>
+                  <NavLink to='/register' className={({ isActive,  }) =>isActive ? "text-black" : "" }><span>REGISTER</span></NavLink></> : <> <NavLink  ><span onClick={handelLogOut}>Log out</span></NavLink> </>
               }
             </li>
 

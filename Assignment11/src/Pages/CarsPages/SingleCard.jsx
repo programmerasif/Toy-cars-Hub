@@ -18,7 +18,7 @@ const SingleCard = ({cars}) => {
     }
     const {make,img,price,rating,_id} = cars
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-80 bg-base-100 shadow-xl " data-aos="fade-up">
             <figure className="px-10 pt-10 h-[300px]">
                 <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>
@@ -27,7 +27,7 @@ const SingleCard = ({cars}) => {
                 <p>Price :{price}</p>
                 <p>Ratings : {rating}</p>
                 <div className="card-actions">
-                    <Link to={`/viewDetilsforHom/${_id}`}><button className="btn" onClick={handelMessage}>View Detils</button></Link>
+                    <Link to={`/viewDetilsforHom/${_id}`}><button className="btn bg-[#394867]" onClick={handelMessage}>View Detils</button></Link>
                 </div>
             </div>
         </div>

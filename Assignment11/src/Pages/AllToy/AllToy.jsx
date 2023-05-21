@@ -11,7 +11,7 @@ const AllToy = () => {
   const [isOn,On] = useState(false)
   const [search,isSearch] = useState(false)
   useEffect(() => {
-    fetch(`http://localhost:5000/allCar`)
+    fetch(`https://server-forassiignment11.vercel.app/allCar`)
       .then(res => res.json())
       .then(data => setCars(data))
   }, [])
@@ -20,7 +20,7 @@ const handelSearch = (e) =>{
 e.preventDefault()
 const form = e.target;
 const text = form.text.value
-fetch(`http://localhost:5000/toySearcing/${text}`)
+fetch(`https://server-forassiignment11.vercel.app/toySearcing/${text}`)
       .then(res => res.json())
       .then(data => setsearchCars(data))
 

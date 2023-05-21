@@ -11,7 +11,7 @@ const {user} = useContext(AuthContext)
 const [myToy,setMytoy] = useState([])
 console.log(user);
     useEffect(() =>{
-        fetch(`http://localhost:5000/allCars?email=${user?.email}`)
+        fetch(`https://server-forassiignment11.vercel.app/allCars?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setMytoy(data))
     },[user?.email])
@@ -33,7 +33,7 @@ console.log(user);
                 'Your file has been deleted.',
                 'success'
               )
-              fetch(`http://localhost:5000/allCars/${id}`,{
+              fetch(`https://server-forassiignment11.vercel.app/allCars/${id}`,{
             method:'DELETE'
     
         })

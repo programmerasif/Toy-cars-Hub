@@ -5,9 +5,9 @@ const BestSellingCard = ({car}) => {
   console.log(car);
   const {productName,picture,price,rating} = car
     return (
-        <div className=" mx-auto ">
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src={picture} alt="car" className="w-72 h-64" /></figure>
+        <div className=" mx-auto " data-aos="fade-up" >
+            <div className="card card-compact w-80 bg-base-100 shadow-xl">
+                    <figure><img src={picture} alt="car" className="w-48 h-64" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">{productName}</h2>
                         <p>Price : {price}</p>

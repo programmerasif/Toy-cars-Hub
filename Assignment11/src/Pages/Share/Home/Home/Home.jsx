@@ -45,7 +45,7 @@ const Home = () => {
         <div className='md:py-28 py-10 bg-[#F1F6F9] w-full p-12'>
           <h3 className='md:text-6xl sm:text-4xl text-black font-bold'><span className=''>Discover joy</span> <br />  <span className='text-[#394867]'>&</span> wonder at our <br />magical toy store!</h3>
 
-          <button className="btn mt-7">SHOP NOW</button>
+          <button className="btn mt-7 bg-[#394867]">SHOP NOW</button>
         </div>
 
       </div>

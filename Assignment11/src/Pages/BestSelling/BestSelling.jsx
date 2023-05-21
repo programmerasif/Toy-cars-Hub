@@ -5,7 +5,7 @@ import BestSellingCard from "./BestSellingCard";
 const BestSelling = () => {
     const [toprated,setToprsit] = useState([])
     useEffect(() =>{
-        fetch('http://localhost:5000/topRated')
+        fetch('https://server-forassiignment11.vercel.app/topRated')
         .then(res => res.json())
         .then(data => setToprsit(data))
     },[])

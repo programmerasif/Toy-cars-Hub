@@ -48,12 +48,12 @@ const router = createBrowserRouter([
       {
         path:'/view/:id',
         element:<PrivateRout><ViewDetils /></PrivateRout>,
-        loader: ({params}) => fetch(`http://localhost:5000/allCars/${params.id}`)
+        loader: ({params}) => fetch(`https://server-forassiignment11.vercel.app/allCars/${params.id}`)
       },
       {
         path:'/viewDetilsforHom/:id',
         element:<PrivateRout><ViewdetilsForHom></ViewdetilsForHom> </PrivateRout>,
-        loader: ({params}) => fetch(`http://localhost:5000/allcarForhome/${params.id}`)
+        loader: ({params}) => fetch(`https://server-forassiignment11.vercel.app/allcarForhome/${params.id}`)
       },
       {
         path: '/myToys',
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
       {
         path:'/updatedToy/:id',
         element:<UpdatedMyToy />,
-        loader: ({params}) => fetch(`http://localhost:5000/allCars/${params.id}`)
+        loader: ({params}) => fetch(`https://server-forassiignment11.vercel.app/allCars/${params.id}`)
         
       }
     ],

@@ -22,7 +22,7 @@ const UpdatedMyToy = () => {
             description
         }
 
-        fetch(`http://localhost:5000/allCars/${_id}`,{
+        fetch(`https://server-forassiignment11.vercel.app/allCars/${_id}`,{
             method: 'PATCH',
             headers:{
                 'content-type' : 'application/json'

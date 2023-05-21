@@ -2,7 +2,7 @@ import galary1 from '../../../../assets/galary/galary1.jpg'
 import galary2 from '../../../../assets/galary/galary2.jpg'
 import galary3 from '../../../../assets/galary/galary3.jpg'
 import galary4 from '../../../../assets/galary/galary4.jpg'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 
 
 const Galary = () => {

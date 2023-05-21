@@ -32,7 +32,7 @@ const AddedToy = () => {
 
         console.log(person);
 
-        fetch(`http://localhost:5000/allCars`,{
+        fetch(`https://server-forassiignment11.vercel.app/allCars`,{
             method: 'POST',
           headers: {
             'content-type': 'application/json'

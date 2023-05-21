@@ -18,6 +18,7 @@ import ViewDetils from './Pages/ViewDetils/ViewDetils';
 import MyToys from './Pages/MyToys/MyToys';
 import UpdatedMyToy from './Pages/MyToys/UpdatedMyToy';
 import PrivateRout from './Pages/PrivateRout/PrivateRout';
+import ViewdetilsForHom from './Pages/ViewDetils/ViewdetilsForHom';
 
 const router = createBrowserRouter([
   {
@@ -45,13 +46,13 @@ const router = createBrowserRouter([
         element: <PrivateRout><AddedToy /></PrivateRout>
       },
       {
-        path:'/viewDetils/:id',
+        path:'/view/:id',
         element:<PrivateRout><ViewDetils /></PrivateRout>,
         loader: ({params}) => fetch(`http://localhost:5000/allCars/${params.id}`)
       },
       {
         path:'/viewDetilsforHom/:id',
-        element:<PrivateRout><ViewDetils /></PrivateRout>,
+        element:<PrivateRout><ViewdetilsForHom></ViewdetilsForHom> </PrivateRout>,
         loader: ({params}) => fetch(`http://localhost:5000/allcarForhome/${params.id}`)
       },
       {

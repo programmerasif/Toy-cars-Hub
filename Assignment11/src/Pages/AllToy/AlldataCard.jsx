@@ -52,7 +52,7 @@ const AlldataCard = ({cars}) => {
                                 <button className="btn btn-ghost btn-xs">{availableQuantity}</button>
                             </th>
                             <th>
-                                <Link to={`/viewDetils/${_id}`}><button className="btn bg-[#394867]">View Detils</button></Link>
+                                <Link to={`/view/${_id}`}><button className="btn bg-[#394867]">View Detils</button></Link>
                             </th>
                         </tr>
                     </tbody>

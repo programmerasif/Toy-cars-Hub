@@ -1,7 +1,9 @@
 import car1 from '../../../../assets/carr1.jpg'
 import car2 from '../../../../assets/carr2.jpg'
 import car3 from '../../../../assets/carr3.jpg'
+import BestSelling from '../../../BestSelling/BestSelling';
 import ShopCatagory from '../../../ShapCatagory/ShopCatagory';
+import ToyInfo from '../../../ToyInfo/ToyInfo';
 import Galary from '../Galary/Galary';
 
 const Home = () => {
@@ -55,6 +57,12 @@ const Home = () => {
     {/* This is shop catagory */}
     <div className='mt-28 mb-28'>
       <ShopCatagory />
+    </div>
+    <div className='mt-28 mb-28'>
+      <ToyInfo />
+    </div>
+    <div className='mt-28 mb-28'>
+      <BestSelling />
     </div>
     </>
   );

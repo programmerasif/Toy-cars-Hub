@@ -1,10 +1,12 @@
 import  { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
+import useTitlt from '../../Hook/useHook';
 
 const Register = () => {
-
+    useTitlt('Register Page')
+    const navigate = useNavigate()
     const {creatUsers,google} = useContext(AuthContext);
     const handelRegister = (e) =>{
         e.preventDefault()
@@ -22,6 +24,7 @@ const Register = () => {
             // Signed in 
             const user = person.user;
             console.log(user);
+            navigate('/')
           })
           .catch((error) => {
             const err = error.message;

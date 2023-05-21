@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useTitlt from "../../Hook/useHook";
 
 
 
 const AddedToy = () => {
     const {user} = useContext(AuthContext)
+    useTitlt('Added Toy')
     const handelAdded = (e) =>{
         e.preventDefault();
         const form = e.target

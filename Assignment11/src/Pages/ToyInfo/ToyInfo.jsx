@@ -2,9 +2,10 @@
 import pic from '../../assets/removeBg1.png'
 
 const ToyInfo = () => {
+    
     return (
         <div className='bg-[#212A3E] relative'>
-          
+        
             <div className='grid md:grid-cols-2 sm:grid-cols-1'>
                 <div className='text-white flex justify-center items-center mt-16 p-3'>
                         <div>

@@ -1,24 +1,18 @@
 import { Link } from "react-router-dom";
-import AOS from 'aos';
+
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import useTitlt from "../../Hook/useHook";
 // ..
 
 const MyToyCards = ({cars,handelDelete}) => {
     const {pictureURL,sellerName,name,subCategory,price,rating,availableQuantity,_id} =cars
    console.log(cars);
-   AOS.init();
-   
+ 
+   useTitlt('My Toy Page')
     return (
         <div >
             <div className="overflow-x-auto w-full " >
-                <table className="table w-full"  data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-center">
+                <table className="table w-full">
                     {/* head */}
                     <thead>
                         <tr>

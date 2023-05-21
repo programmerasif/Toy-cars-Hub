@@ -1,3 +1,4 @@
+import useTitlt from '../../../../Hook/useHook';
 import car1 from '../../../../assets/carr1.jpg'
 import car2 from '../../../../assets/carr2.jpg'
 import car3 from '../../../../assets/carr3.jpg'
@@ -7,6 +8,7 @@ import ToyInfo from '../../../ToyInfo/ToyInfo';
 import Galary from '../Galary/Galary';
 
 const Home = () => {
+  useTitlt('Home Page')
   return (
     <>
     {/* This is banner */}

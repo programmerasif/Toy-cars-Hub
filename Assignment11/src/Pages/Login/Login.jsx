@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FaGoogle } from "react-icons/fa";
+import useTitlt from "../../Hook/useHook";
 
 const Login = () => {
 
@@ -10,6 +11,7 @@ const Login = () => {
     const [err ,setErr] = useState(' ')
         const navigate = useNavigate()
         const from = useLocation()
+        useTitlt('Login Page')
         console.log(from.state?.from);
         console.log(from);
     const handelLogin = (e) =>{

@@ -1,8 +1,10 @@
 
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitlt from '../../Hook/useHook';
 
 const ViewdetilsForHom = () => {
     const data = useLoaderData()
+    useTitlt('View Detils')
     const {img,rating,price,make,description} = data
     console.log(data);
     return (

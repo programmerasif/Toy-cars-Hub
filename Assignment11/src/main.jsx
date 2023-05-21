@@ -19,11 +19,13 @@ import MyToys from './Pages/MyToys/MyToys';
 import UpdatedMyToy from './Pages/MyToys/UpdatedMyToy';
 import PrivateRout from './Pages/PrivateRout/PrivateRout';
 import ViewdetilsForHom from './Pages/ViewDetils/ViewdetilsForHom';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
